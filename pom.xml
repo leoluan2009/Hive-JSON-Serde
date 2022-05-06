@@ -37,11 +37,11 @@
         <cdh5.hadoop.version>2.3.0-cdh${cdh5.version}</cdh5.hadoop.version>
         <!-- hdp23 versions -->
         <hdp23.version>2.3.0</hdp23.version>
-        <hdp23.hive.version>1.2.1</hdp23.hive.version>
+        <hdp23.hive.version>2.3.7</hdp23.hive.version>
         <hdp23.hadoop.version>2.7.1</hdp23.hadoop.version>
         <!-- hdp24 versions -->
         <hdp23.version>2.3.0</hdp23.version>
-        <hdp23.hive.version>1.2.1</hdp23.hive.version>
+        <hdp23.hive.version>2.3.7</hdp23.hive.version>
         <hdp23.hadoop.version>2.7.1</hdp23.hadoop.version>
         <hadoop.dependency>hadoop-common</hadoop.dependency>
     </properties>
@@ -67,7 +67,7 @@
         <profile>
             <id>cdh5</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <modules>
                 <module>json-serde-cdh5-shim</module>
@@ -84,7 +84,7 @@
         <profile>
             <id>hdp23</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
                 <module>json-serde-cdh5-shim</module>
@@ -110,7 +110,7 @@
         <repository>
             <id>Cloudera</id>
             <name>Cloudera Maven Repo</name>
-            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+            <url>https://repository.cloudera.com/artifactory/ext-release-local</url>
         </repository>
     </repositories>
 
