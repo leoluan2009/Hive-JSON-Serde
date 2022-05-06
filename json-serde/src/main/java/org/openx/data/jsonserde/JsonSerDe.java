@@ -465,6 +465,8 @@ public class JsonSerDe extends AbstractSerDe {
         return mps;
     }
 
-
-    
+    @Override
+    public boolean shouldStoreFieldsInMetastore(Map<String, String> tableParams) {
+        return true;
+    }
 }
